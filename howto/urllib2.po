@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-11 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Editorial (https://python.flowdas.com)\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -513,14 +513,13 @@ msgstr ""
 "범위의 에러 코드만 보게 됩니다."
 
 #: ../../howto/urllib2.rst:247
-#, fuzzy
 msgid ""
 ":attr:`http.server.BaseHTTPRequestHandler.responses` is a useful "
 "dictionary of response codes that shows all the response codes used by "
 ":rfc:`2616`. An excerpt from the dictionary is shown below ::"
 msgstr ""
 ":attr:`http.server.BaseHTTPRequestHandler.responses`\\는 :rfc:`2616`\\가 "
-"사용하는 모든 응답 코드를 표시하는 유용한 응답 코드 딕셔너리입니다. 편의를 위해 딕셔너리를 여기에 재현합니다 ::"
+"사용하는 모든 응답 코드를 표시하는 유용한 응답 코드 딕셔너리입니다. 아래에 딕셔너리의 일부를 발췌했습니다 ::"
 
 #: ../../howto/urllib2.rst:251
 #, python-brace-format
