@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-11 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Dong-gweon Oh <flowdas@gmail.com>\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -114,6 +114,9 @@ msgid ""
 "multiplied by 100, with 2 decimal places and followed by a percent sign "
 "(see :ref:`formatspec` for details)."
 msgstr ""
+"``yes_votes`` 가 공백으로 채워지고 음수일 때만 음의 부호가 붙는 것에 주목하세요. 이 예는 ``percentage`` "
+"에 100을 곱해서 소수점 이하 2자리로, 뒤에 퍼센트 기호를 붙여 인쇄하기도 합니다 (자세한 내용은 "
+":ref:`formatspec` 를 보세요)."
 
 #: ../../tutorial/inputoutput.rst:57
 msgid ""
@@ -201,7 +204,6 @@ msgstr ""
 "\"(32.5, 40000, ('spam', 'eggs'))\""
 
 #: ../../tutorial/inputoutput.rst:98
-#, fuzzy
 msgid ""
 "The :mod:`string` module contains support for a simple templating "
 "approach based upon regular expressions, via :class:`string.Template`. "
@@ -210,9 +212,9 @@ msgid ""
 "dictionary. This syntax is easy to use, although it offers much less "
 "control for formatting."
 msgstr ""
-":mod:`string` 모듈에는 문자열에 값을 치환하는 또 다른 방법을 제공하는 :class:`~string.Template` "
-"클래스가 포함되어 있습니다. ``$x``\\와 같은 자리 표시자를 사용하고 이것들을 딕셔너리에서 오는 값으로 치환하지만, 포매팅에 "
-"대한 제어를 훨씬 덜 제공합니다."
+":mod:`string` 모듈은 :class:`string.Template` 를 통해 정규식에 기반을 둔 간단한 템플릿 방식을 "
+"지원합니다. 이는 ``$x`` 와 같은 자리 표시자를 사용하고 이것들을 딕셔너리에서 오는 값으로 치환해서, 문자열에 값을 넣는 또 "
+"다른 방법을 제공합니다. 이 문법은 사용하기 쉽지만, 포매팅에 대한 제어를 훨씬 덜 제공합니다."
 
 #: ../../tutorial/inputoutput.rst:115
 msgid "Formatted String Literals"
@@ -305,6 +307,8 @@ msgid ""
 "the expression, an equal sign, then the representation of the evaluated "
 "expression:"
 msgstr ""
+"``=`` 지정자를 사용하면 표현식을 표현식의 텍스트, 등호, 그리고 값을 구한 표현식의 표현(representation)으로 "
+"확장할 수 있습니다:"
 
 #: ../../tutorial/inputoutput.rst:160
 msgid ""
@@ -1057,6 +1061,8 @@ msgid ""
 "JSON files must be encoded in UTF-8. Use ``encoding=\"utf-8\"`` when "
 "opening JSON file as a :term:`text file` for both of reading and writing."
 msgstr ""
+"JSON 파일은 UTF-8로 인코딩되어야 합니다. 읽기와 쓰기 모두, JSON 파일을 :term:`텍스트 파일 <text "
+"file>` 로 열 때 ``encoding=\"utf-8\"`` 을 사용하세요."
 
 #: ../../tutorial/inputoutput.rst:538
 msgid ""

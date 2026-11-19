@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-11 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Dong-gweon Oh <flowdas@gmail.com>\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -25,7 +25,7 @@ msgstr "파이썬 자습서"
 msgid ""
 "This tutorial is designed for *programmers* that are new to the Python "
 "language, **not** *beginners* who are new to programming."
-msgstr ""
+msgstr "이 자습서는 프로그래밍을 처음 접하는 *초보자* 가 **아니라**, 파이썬 언어를 처음 접하는 *프로그래머* 를 위해 만들어졌습니다."
 
 #: ../../tutorial/index.rst:11
 msgid ""
@@ -64,7 +64,6 @@ msgstr ""
 "있습니다. 파이썬은 사용자 맞춤화가 가능한 응용 프로그램을 위한 확장 언어로도 적합합니다."
 
 #: ../../tutorial/index.rst:27
-#, fuzzy
 msgid ""
 "This tutorial introduces the reader informally to the basic concepts and "
 "features of the Python language and system. Be aware that it expects you "
@@ -72,8 +71,9 @@ msgid ""
 " a Python interpreter handy for hands-on experience, but all examples are"
 " self-contained, so the tutorial can be read off-line as well."
 msgstr ""
-"이 학습서는 파이썬 언어와 시스템의 기본 개념과 기능들을 격식 없이 소개합니다. 실습 경험을 위해 파이썬 인터프리터가 있으면 도움이"
-" 되지만, 모든 예제가 독립적이기 때문에 오프라인에서 읽기에도 적합합니다."
+"이 자습서는 파이썬 언어와 시스템의 기본 개념과 기능들을 격식 없이 소개합니다. 프로그래밍 전반에 대한 기본적인 이해가 있다고 "
+"가정한다는 점에 유의하세요. 실습 경험을 위해 파이썬 인터프리터가 있으면 도움이 되지만, 모든 예제가 독립적이기 때문에 오프라인에서"
+" 읽기에도 적합합니다."
 
 #: ../../tutorial/index.rst:33
 msgid ""

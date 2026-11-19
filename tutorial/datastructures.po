@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-11 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Editorial (https://python.flowdas.com)\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -78,12 +78,11 @@ msgid "Remove all items from the list.  Similar to ``del a[:]``."
 msgstr "리스트의 모든 항목을 삭제합니다. ``del a[:]`` 와 비슷합니다."
 
 #: ../../tutorial/datastructures.rst:65
-#, fuzzy
 msgid ""
 "Return zero-based index of the first occurrence of *x* in the list. "
 "Raises a :exc:`ValueError` if there is no such item."
 msgstr ""
-"리스트에 있는 항목 중 값이 *x* 와 같은 첫 번째 것의 0부터 시작하는 인덱스를 돌려줍니다. 그런 항목이 없으면 "
+"리스트에서 *x* 가 처음으로 등장하는 위치의 0부터 시작하는 인덱스를 돌려줍니다. 그런 항목이 없으면 "
 ":exc:`ValueError` 를 일으킵니다."
 
 #: ../../tutorial/datastructures.rst:68
@@ -199,7 +198,6 @@ msgid "Using Lists as Stacks"
 msgstr "리스트를 스택으로 사용하기"
 
 #: ../../tutorial/datastructures.rst:143
-#, fuzzy
 msgid ""
 "The list methods make it very easy to use a list as a stack, where the "
 "last element added is the first element retrieved (\"last-in, first-"
@@ -208,8 +206,8 @@ msgid ""
 " :meth:`~list.pop` without an explicit index.  For example::"
 msgstr ""
 "리스트 메서드들은 리스트를 스택으로 사용하기 쉽게 만드는데, 마지막에 넣은 요소가 처음으로 꺼내지는 요소입니다 (\"last-in,"
-" first-out\"). 스택의 꼭대기에 항목을 넣으려면 :meth:`!append` 를 사용하세요. 스택의 꼭대기에서 값을 "
-"꺼내려면 명시적인 인덱스 없이 :meth:`!pop` 을 사용하세요. 예를 들어::"
+" first-out\"). 스택의 꼭대기에 항목을 넣으려면 :meth:`~list.append` 를 사용하세요. 스택의 꼭대기에서 "
+"값을 꺼내려면 명시적인 인덱스 없이 :meth:`~list.pop` 을 사용하세요. 예를 들어::"
 
 #: ../../tutorial/datastructures.rst:148
 msgid ""
@@ -608,7 +606,6 @@ msgid "The :keyword:`!del` statement"
 msgstr ":keyword:`!del` 문"
 
 #: ../../tutorial/datastructures.rst:342
-#, fuzzy
 msgid ""
 "There is a way to remove an item from a list given its index instead of "
 "its value: the :keyword:`del` statement.  This differs from the "
@@ -618,8 +615,8 @@ msgid ""
 "slice).  For example::"
 msgstr ""
 "리스트에서 값 대신에 인덱스를 사용해서 항목을 삭제하는 방법이 있습니다: :keyword:`del` 문입니다. 이것은 값을 돌려주는"
-" :meth:`!pop` 메서드와 다릅니다. :keyword:`!del` 문은 리스트에서 슬라이스를 삭제하거나 전체 리스트를 비우는"
-" 데도 사용될 수 있습니다 (앞에서 빈 리스트를 슬라이스에 대입해서 했던 일입니다). 예를 들어::"
+" :meth:`~list.pop` 메서드와 다릅니다. :keyword:`!del` 문은 리스트에서 슬라이스를 삭제하거나 전체 "
+"리스트를 비우는 데도 사용될 수 있습니다 (앞에서 빈 리스트를 슬라이스에 대입해서 했던 일입니다). 예를 들어::"
 
 #: ../../tutorial/datastructures.rst:348
 msgid ""
@@ -910,7 +907,6 @@ msgid "Dictionaries"
 msgstr "딕셔너리"
 
 #: ../../tutorial/datastructures.rst:495
-#, fuzzy
 msgid ""
 "Another useful data type built into Python is the *dictionary* (see "
 ":ref:`typesmapping`). Dictionaries are sometimes found in other languages"
@@ -929,8 +925,8 @@ msgstr ""
 "arrays)\" 의 형태로 발견됩니다. 숫자들로 인덱싱되는 시퀀스와 달리, 딕셔너리는 *키* 로 인덱싱되는데, 모든 불변형을 "
 "사용할 수 있습니다; 문자열과 숫자들은 항상 키가 될 수 있습니다. 튜플이 문자열, 숫자, 튜플들만 포함하면, 키로 사용될 수 "
 "있습니다; 튜플이 직접적이나 간접적으로 가변 객체를 포함하면, 키로 사용될 수 없습니다. 리스트는 키로 사용할 수 없는데, 리스트는"
-" 인덱스 대입, 슬라이스 대입, :meth:`!append` 나 :meth:`!extend` 같은 메서드들로 값이 수정될 수 있기 "
-"때문입니다."
+" 인덱스 대입, 슬라이스 대입, :meth:`~list.append` 나 :meth:`~list.extend` 같은 메서드들로 값이"
+" 수정될 수 있기 때문입니다."
 
 #: ../../tutorial/datastructures.rst:506
 #, python-brace-format
@@ -946,7 +942,6 @@ msgstr ""
 " 쌍들을 제공합니다; 이것이 딕셔너리가 출력되는 방식이기도 합니다."
 
 #: ../../tutorial/datastructures.rst:512
-#, fuzzy
 msgid ""
 "The main operations on a dictionary are storing a value with some key and"
 " extracting the value given the key.  It is also possible to delete a "
@@ -954,8 +949,7 @@ msgid ""
 "use, the old value associated with that key is forgotten."
 msgstr ""
 "딕셔너리의 주 연산은 값을 키와 함께 저장하고 주어진 키로 값을 추출하는 것입니다. ``del`` 로 키:값 쌍을 삭제하는 것도 "
-"가능합니다. 이미 사용하고 있는 키로 저장하면, 그 키로 저장된 예전 값은 잊힙니다. 존재하지 않는 키로 값을 추출하는 것은 "
-"에러입니다."
+"가능합니다. 이미 사용하고 있는 키로 저장하면, 그 키로 저장된 예전 값은 잊힙니다."
 
 #: ../../tutorial/datastructures.rst:517
 msgid ""
@@ -965,6 +959,9 @@ msgid ""
 "instead, which returns ``None`` (or a specified default value) if the key"
 " is not in the dictionary."
 msgstr ""
+"존재하지 않는 키의 값을 서브 스크립트(``d[key]``)로 추출하면 :exc:`KeyError` 를 일으킵니다. 존재하지 않을 "
+"수도 있는 키에 접근할 때 이 에러를 피하려면, 대신 :meth:`~dict.get` 메서드를 사용하세요. 이 메서드는 키가 "
+"딕셔너리에 없으면 ``None`` (또는 지정한 기본값)을 돌려줍니다."
 
 #: ../../tutorial/datastructures.rst:522
 msgid ""

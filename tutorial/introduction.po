@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-11 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Dong-gweon Oh <flowdas@gmail.com>\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -41,6 +41,8 @@ msgid ""
 "when hovering over or tapping a code example), which strips prompts and "
 "omits output, to copy and paste the input lines into your interpreter."
 msgstr ""
+"\"복사\" 버튼(코드 예제 위에 마우스를 올리거나 탭하면 오른쪽 위 모서리에 나타납니다)을 사용하면, 프롬프트를 제거하고 출력을 "
+"생략해서 입력 줄을 인터프리터에 복사해 붙여넣을 수 있습니다."
 
 #: ../../tutorial/introduction.rst:22
 msgid ""
@@ -295,6 +297,10 @@ msgid ""
 "back.``\", etc. \"``Yay! :)``\". They can be enclosed in single quotes "
 "(``'...'``) or double quotes (``\"...\"``) with the same result [#]_."
 msgstr ""
+"파이썬은 숫자뿐만 아니라 텍스트(\"문자열\"이라고 부르는 :class:`str` 형으로 표현됩니다)도 다룰 수 있습니다. 여기에는"
+" 문자 \"``!``\", 단어 \"``rabbit``\", 이름 \"``Paris``\", 문장 \"``Got your "
+"back.``\" 등이 포함됩니다. \"``Yay! :)``\". 작은따옴표(``'...'``)나 큰따옴표(``\"...\"``)로"
+" 둘러쌀 수 있으며 결과는 같습니다 [#]_."
 
 #: ../../tutorial/introduction.rst:149
 msgid ""
@@ -305,12 +311,20 @@ msgid ""
 ">>> '1975'  # digits and numerals enclosed in quotes are also strings\n"
 "'1975'"
 msgstr ""
+">>> 'spam eggs'  # 작은따옴표\n"
+"'spam eggs'\n"
+">>> \"Paris rabbit got your back :)! Yay!\"  # 큰따옴표\n"
+"'Paris rabbit got your back :)! Yay!'\n"
+">>> '1975'  # 따옴표로 둘러싼 숫자도 문자열입니다\n"
+"'1975'"
 
 #: ../../tutorial/introduction.rst:158
 msgid ""
 "To quote a quote, we need to \"escape\" it, by preceding it with ``\\``. "
 "Alternatively, we can use the other type of quotation marks::"
 msgstr ""
+"따옴표를 따옴표로 둘러싸려면, 앞에 ``\\`` 를 붙여서 \"이스케이프\" 해야 합니다. 또는, 다른 종류의 따옴표를 사용할 수 "
+"있습니다::"
 
 #: ../../tutorial/introduction.rst:161
 msgid ""
@@ -343,6 +357,8 @@ msgid ""
 "by omitting the enclosing quotes and by printing escaped and special "
 "characters::"
 msgstr ""
+"파이썬 셸에서, 문자열 정의와 출력 문자열은 다르게 보일 수 있습니다. :func:`print` 함수는 둘러싼 따옴표를 생략하고 "
+"이스케이프 문자와 특수 문자를 인쇄해서, 더 읽기 쉬운 출력을 만듭니다::"
 
 #: ../../tutorial/introduction.rst:176
 msgid ""
@@ -390,6 +406,8 @@ msgid ""
 " odd number of ``\\`` characters; see :ref:`the FAQ entry <faq-"
 "programming-raw-string-backslash>` for more information and workarounds."
 msgstr ""
+"날 문자열에는 미묘한 점이 하나 있습니다: 날 문자열은 홀수 개의 ``\\`` 문자로 끝날 수 없습니다; 더 자세한 정보와 해결 "
+"방법은 :ref:`FAQ 항목 <faq-programming-raw-string-backslash>` 을 보세요."
 
 #: ../../tutorial/introduction.rst:198
 msgid ""
@@ -899,12 +917,11 @@ msgstr ""
 "[1, 8, 27, 64, 125]"
 
 #: ../../tutorial/introduction.rst:422
-#, fuzzy
 msgid ""
 "You can also add new items at the end of the list, by using the "
 ":meth:`list.append` *method* (we will see more about methods later)::"
 msgstr ""
-":meth:`!list.append` *메서드 (method)* (나중에 메서드에 대해 더 자세히 알아볼 것입니다) 를 사용하면 "
+":meth:`list.append` *메서드 (method)* (나중에 메서드에 대해 더 자세히 알아볼 것입니다) 를 사용하면 "
 "리스트의 끝에 새 항목을 추가할 수 있습니다::"
 
 #: ../../tutorial/introduction.rst:425
@@ -926,6 +943,8 @@ msgid ""
 "make to the list through one variable will be seen through all other "
 "variables that refer to it.::"
 msgstr ""
+"파이썬에서 단순 대입은 절대 데이터를 복사하지 않습니다. 리스트를 변수에 대입하면, 변수는 *기존 리스트* 를 가리킵니다. 한 "
+"변수를 통해 리스트에 가한 변경은 그 리스트를 가리키는 다른 모든 변수를 통해서도 보입니다.::"
 
 #: ../../tutorial/introduction.rst:435
 msgid ""
