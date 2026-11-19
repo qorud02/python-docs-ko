@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-04-17 23:44+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Dong-gweon Oh <flowdas@gmail.com>\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -136,7 +136,7 @@ msgstr "이름을 중첩된 함수와 클래스에 관한 설명자로 매핑하
 msgid ""
 "``True`` for functions that are defined with the :keyword:`async <async "
 "def>` prefix, ``False`` otherwise."
-msgstr ""
+msgstr ":keyword:`async <async def>` 접두사로 정의된 함수면 ``True``, 그렇지 않으면 ``False``."
 
 #: ../../library/pyclbr.rst:114
 msgid "Class Objects"

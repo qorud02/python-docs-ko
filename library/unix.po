@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-11 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Dong-gweon Oh <flowdas@gmail.com>\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -18,7 +18,6 @@ msgstr ""
 "Generated-By: Babel 2.17.0\n"
 
 #: ../../library/unix.rst:5
-#, fuzzy
 msgid "Unix-specific services"
 msgstr "유닉스 특정 서비스"
 
