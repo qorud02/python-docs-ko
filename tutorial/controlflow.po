@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-11 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Dong-gweon Oh <flowdas@gmail.com>\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -85,6 +85,8 @@ msgid ""
 "specific types or attributes, you may also find the :keyword:`!match` "
 "statement useful. For more details see :ref:`tut-match`."
 msgstr ""
+"같은 값을 여러 상수와 비교하거나, 특정 형이나 어트리뷰트를 확인하는 경우에는 :keyword:`!match` 문이 유용할 수 "
+"있습니다. 자세한 내용은 :ref:`tut-match`\\를 보세요."
 
 #: ../../tutorial/controlflow.rst:46
 msgid ":keyword:`!for` Statements"
@@ -403,18 +405,23 @@ msgid ""
 "finishes without executing the :keyword:`!break`, the :keyword:`!else` "
 "clause executes."
 msgstr ""
+":keyword:`!for` 나 :keyword:`!while` 루프에서 :keyword:`!break` 문은 "
+":keyword:`!else` 절과 짝을 이룰 수 있습니다. 루프가 :keyword:`!break`\\를 실행하지 않고 끝나면, "
+":keyword:`!else` 절이 실행됩니다."
 
 #: ../../tutorial/controlflow.rst:208
 msgid ""
 "In a :keyword:`for` loop, the :keyword:`!else` clause is executed after "
 "the loop finishes its final iteration, that is, if no break occurred."
 msgstr ""
+":keyword:`for` 루프에서는, 루프가 마지막 이터레이션을 마친 후, 즉 break 가 발생하지 않았을 때 "
+":keyword:`!else` 절이 실행됩니다."
 
 #: ../../tutorial/controlflow.rst:211
 msgid ""
 "In a :keyword:`while` loop, it's executed after the loop's condition "
 "becomes false."
-msgstr ""
+msgstr ":keyword:`while` 루프에서는, 루프의 조건이 거짓이 된 후에 실행됩니다."
 
 #: ../../tutorial/controlflow.rst:213
 msgid ""
@@ -423,12 +430,15 @@ msgid ""
 "of ending the loop early, such as a :keyword:`return` or a raised "
 "exception, will also skip execution of the :keyword:`else` clause."
 msgstr ""
+"두 종류의 루프 모두, 루프가 :keyword:`break`\\로 종료되면 :keyword:`!else` 절은 실행되지 "
+"**않습니다**. 물론, :keyword:`return` 이나 예외 발생처럼 루프를 일찍 끝내는 다른 방법도 "
+":keyword:`else` 절의 실행을 건너뜁니다."
 
 #: ../../tutorial/controlflow.rst:218
 msgid ""
 "This is exemplified in the following :keyword:`!for` loop, which searches"
 " for prime numbers::"
-msgstr ""
+msgstr "소수를 찾는 다음 :keyword:`!for` 루프가 그 예입니다::"
 
 #: ../../tutorial/controlflow.rst:221
 #, python-format
@@ -486,6 +496,9 @@ msgid ""
 "condition is never true, the ``else`` clause outside the loop will "
 "execute."
 msgstr ""
+"else 절을 이해하는 한 가지 방법은 루프 안의 ``if`` 와 짝을 이룬다고 상상하는 것입니다. 루프가 실행되면서 "
+"if/if/if/else 같은 순서로 실행됩니다. ``if`` 는 루프 안에 있어서 여러 번 만나게 됩니다. 조건이 한 번이라도 "
+"참이 되면 ``break`` 가 일어납니다. 조건이 한 번도 참이 되지 않으면, 루프 바깥의 ``else`` 절이 실행됩니다."
 
 #: ../../tutorial/controlflow.rst:248
 msgid ""
@@ -566,6 +579,10 @@ msgid ""
 "expression here), but :code:`...` is used conventionally as a placeholder"
 " body as well. See :ref:`bltin-ellipsis-object`."
 msgstr ""
+"이 마지막 경우에, 많은 사람이 :code:`pass` 대신 생략 부호 리터럴 :code:`...`\\을 사용합니다. 이 용법은 "
+"파이썬에 특별한 의미가 없고 언어 정의의 일부도 아니지만 (여기에는 어떤 상수 표현식이든 사용할 수 있습니다), "
+":code:`...`\\은 관례적으로 자리 표시자 바디로도 사용됩니다. :ref:`bltin-ellipsis-object`\\를 "
+"보세요."
 
 #: ../../tutorial/controlflow.rst:291
 msgid ":keyword:`!match` Statements"
@@ -582,10 +599,14 @@ msgid ""
 "attributes) from the value into variables. If no case matches, none of "
 "the branches is executed."
 msgstr ""
+":keyword:`match` 문은 표현식을 받아서 그 값을 하나 이상의 case 블록으로 주어진 연속적인 패턴들과 비교합니다. "
+"이는 표면적으로 C, Java, JavaScript (그리고 다른 많은 언어)의 switch 문과 비슷하지만, Rust 나 "
+"Haskell 같은 언어의 패턴 매칭에 더 가깝습니다. 일치하는 첫 번째 패턴만 실행되며, 값에서 구성 요소(시퀀스 요소나 객체 "
+"어트리뷰트)를 추출해서 변수에 넣을 수도 있습니다. 일치하는 case 가 없으면, 어떤 분기도 실행되지 않습니다."
 
 #: ../../tutorial/controlflow.rst:302
 msgid "The simplest form compares a subject value against one or more literals::"
-msgstr ""
+msgstr "가장 단순한 형태는 대상 값을 하나 이상의 리터럴과 비교합니다::"
 
 #: ../../tutorial/controlflow.rst:304
 msgid ""
@@ -615,13 +636,13 @@ msgstr ""
 msgid ""
 "Note the last block: the \"variable name\" ``_`` acts as a *wildcard* and"
 " never fails to match."
-msgstr ""
+msgstr "마지막 블록에 주목하세요: \"변수 이름\" ``_`` 는 *와일드카드* 로 작동하며 매칭에 절대 실패하지 않습니다."
 
 #: ../../tutorial/controlflow.rst:318
 msgid ""
 "You can combine several literals in a single pattern using ``|`` "
 "(\"or\")::"
-msgstr ""
+msgstr "``|`` (\"or\")를 사용해서 여러 리터럴을 하나의 패턴으로 결합할 수 있습니다::"
 
 #: ../../tutorial/controlflow.rst:320
 msgid ""
@@ -635,7 +656,7 @@ msgstr ""
 msgid ""
 "Patterns can look like unpacking assignments, and can be used to bind "
 "variables::"
-msgstr ""
+msgstr "패턴은 언패킹 대입처럼 생길 수 있으며, 변수를 연결하는 데 사용할 수 있습니다::"
 
 #: ../../tutorial/controlflow.rst:326
 #, python-brace-format
@@ -675,6 +696,9 @@ msgid ""
 "captures two values, which makes it conceptually similar to the unpacking"
 " assignment ``(x, y) = point``."
 msgstr ""
+"이것을 주의 깊게 살펴보세요! 첫 번째 패턴에는 두 개의 리터럴이 있으며, 위에서 보인 리터럴 패턴의 확장으로 생각할 수 있습니다."
+" 하지만 다음 두 패턴은 리터럴과 변수를 결합하며, 변수는 대상(``point``)의 값을 *연결* 합니다. 네 번째 패턴은 두 "
+"개의 값을 포착하는데, 개념적으로 언패킹 대입 ``(x, y) = point`` 와 비슷합니다."
 
 #: ../../tutorial/controlflow.rst:346
 msgid ""
@@ -682,6 +706,8 @@ msgid ""
 "name followed by an argument list resembling a constructor, but with the "
 "ability to capture attributes into variables::"
 msgstr ""
+"데이터를 구조화하기 위해 클래스를 사용하고 있다면, 클래스 이름 다음에 생성자와 비슷한 인자 목록을 사용할 수 있는데, 어트리뷰트를"
+" 변수로 포착할 수 있습니다::"
 
 #: ../../tutorial/controlflow.rst:350
 #, python-brace-format
@@ -731,6 +757,10 @@ msgid ""
 "(\"x\", \"y\"), the following patterns are all equivalent (and all bind "
 "the ``y`` attribute to the ``var`` variable)::"
 msgstr ""
+"어트리뷰트에 순서를 제공하는 일부 내장 클래스(예를 들어, 데이터 클래스)에는 위치 매개변수를 사용할 수 있습니다. 클래스에 "
+"``__match_args__`` 특수 어트리뷰트를 설정해서 패턴에서 어트리뷰트의 특정 위치를 정의할 수도 있습니다. 이것이 "
+"(\"x\", \"y\")로 설정되면, 다음 패턴들은 모두 동등합니다 (그리고 모두 ``y`` 어트리뷰트를 ``var`` 변수에 "
+"연결합니다)::"
 
 #: ../../tutorial/controlflow.rst:374
 msgid ""
@@ -754,12 +784,18 @@ msgid ""
 "names (recognized by the \"(...)\" next to them like ``Point`` above) are"
 " never assigned to."
 msgstr ""
+"패턴을 읽는 권장 방법은 패턴을 대입문의 왼쪽에 놓는 것의 확장된 형태로 보고, 어떤 변수가 무엇으로 설정될지 이해하는 것입니다. "
+"독립된 이름(위의 ``var`` 같은)만 match 문에 의해 대입됩니다. 점으로 구분된 이름(``foo.bar`` 같은), "
+"어트리뷰트 이름(위의 ``x=`` 와 ``y=``), 클래스 이름(위의 ``Point`` 처럼 옆에 붙은 \"(...)\"로 "
+"인식됩니다)에는 절대 대입되지 않습니다."
 
 #: ../../tutorial/controlflow.rst:386
 msgid ""
 "Patterns can be arbitrarily nested.  For example, if we have a short list"
 " of Points, with ``__match_args__`` added, we could match it like this::"
 msgstr ""
+"패턴은 임의로 중첩될 수 있습니다. 예를 들어, ``__match_args__`` 를 추가한 Point 들의 짧은 리스트가 있다면,"
+" 다음과 같이 매칭할 수 있습니다::"
 
 #: ../../tutorial/controlflow.rst:389
 #, python-brace-format
@@ -806,6 +842,8 @@ msgid ""
 "guard is false, ``match`` goes on to try the next case block.  Note that "
 "value capture happens before the guard is evaluated::"
 msgstr ""
+"패턴에 \"가드\"라고 하는 ``if`` 절을 추가할 수 있습니다. 가드가 거짓이면, ``match`` 는 다음 case 블록을 "
+"시도합니다. 값 포착은 가드의 값을 구하기 전에 일어난다는 점에 유의하세요::"
 
 #: ../../tutorial/controlflow.rst:411
 #, python-brace-format
@@ -824,7 +862,7 @@ msgstr ""
 
 #: ../../tutorial/controlflow.rst:417
 msgid "Several other key features of this statement:"
-msgstr ""
+msgstr "이 문장의 몇 가지 다른 주요 기능:"
 
 #: ../../tutorial/controlflow.rst:419
 msgid ""
@@ -832,6 +870,8 @@ msgid ""
 " meaning and actually match arbitrary sequences.  An important exception "
 "is that they don't match iterators or strings."
 msgstr ""
+"언패킹 대입처럼, 튜플과 리스트 패턴은 정확히 같은 의미가 있으며, 실제로는 임의의 시퀀스와 일치합니다. 중요한 예외는 이터레이터나"
+" 문자열과는 일치하지 않는다는 것입니다."
 
 #: ../../tutorial/controlflow.rst:423
 msgid ""
@@ -840,6 +880,9 @@ msgid ""
 " may also be ``_``, so ``(x, y, *_)`` matches a sequence of at least two "
 "items without binding the remaining items."
 msgstr ""
+"시퀀스 패턴은 확장 언패킹을 지원합니다: ``[x, y, *rest]`` 와 ``(x, y, *rest)`` 는 언패킹 대입과 "
+"비슷하게 작동합니다. ``*`` 뒤의 이름은 ``_`` 일 수도 있어서, ``(x, y, *_)`` 는 나머지 항목들을 연결하지 "
+"않고 최소 두 개의 항목이 있는 시퀀스와 일치합니다."
 
 #: ../../tutorial/controlflow.rst:428
 #, python-brace-format
@@ -850,10 +893,13 @@ msgid ""
 "is also supported.  (But ``**_`` would be redundant, so it is not "
 "allowed.)"
 msgstr ""
+"매핑 패턴: ``{\"bandwidth\": b, \"latency\": l}`` 는 딕셔너리에서 ``\"bandwidth\"`` "
+"와 ``\"latency\"`` 값을 포착합니다. 시퀀스 패턴과 달리, 추가 키는 무시됩니다. ``**rest`` 같은 언패킹도 "
+"지원됩니다. (하지만 ``**_`` 는 불필요하므로 허용되지 않습니다.)"
 
 #: ../../tutorial/controlflow.rst:433
 msgid "Subpatterns may be captured using the ``as`` keyword::"
-msgstr ""
+msgstr "``as`` 키워드를 사용해서 서브 패턴을 포착할 수 있습니다::"
 
 #: ../../tutorial/controlflow.rst:435
 msgid "case (Point(x1, y1), Point(x2, y2) as p2): ..."
@@ -863,19 +909,19 @@ msgstr "case (Point(x1, y1), Point(x2, y2) as p2): ..."
 msgid ""
 "will capture the second element of the input as ``p2`` (as long as the "
 "input is a sequence of two points)"
-msgstr ""
+msgstr "는 입력의 두 번째 요소를 ``p2`` 로 포착합니다 (입력이 두 점의 시퀀스인 한)"
 
 #: ../../tutorial/controlflow.rst:440
 msgid ""
 "Most literals are compared by equality, however the singletons ``True``, "
 "``False`` and ``None`` are compared by identity."
-msgstr ""
+msgstr "대부분의 리터럴은 동등성으로 비교되지만, 싱글톤 ``True``, ``False``, ``None`` 은 아이덴티티로 비교됩니다."
 
 #: ../../tutorial/controlflow.rst:443
 msgid ""
 "Patterns may use named constants.  These must be dotted names to prevent "
 "them from being interpreted as capture variable::"
-msgstr ""
+msgstr "패턴은 이름 붙인 상수를 사용할 수 있습니다. 이것들은 포착 변수로 해석되지 않도록 점으로 구분된 이름이어야 합니다::"
 
 #: ../../tutorial/controlflow.rst:446
 msgid ""
@@ -917,7 +963,7 @@ msgstr ""
 msgid ""
 "For a more detailed explanation and additional examples, you can look "
 "into :pep:`636` which is written in a tutorial format."
-msgstr ""
+msgstr "더 자세한 설명과 추가 예제는 자습서 형식으로 작성된 :pep:`636`\\을 참고하세요."
 
 #: ../../tutorial/controlflow.rst:468
 msgid "Defining Functions"
@@ -1112,7 +1158,6 @@ msgstr ""
 "은 ``None``\\을 돌려줍니다. 함수의 끝으로 떨어지면 역시 ``None``\\을 돌려줍니다."
 
 #: ../../tutorial/controlflow.rst:564
-#, fuzzy
 msgid ""
 "The statement ``result.append(a)`` calls a *method* of the list object "
 "``result``.  A method is a function that 'belongs' to an object and is "
@@ -1130,9 +1175,9 @@ msgstr ""
 "'속하는' 함수이고 ``obj.methodname`` 라고 이름 붙여지는데, ``obj``\\는 어떤 객체이고 (표현식이 될 수 "
 "있습니다), ``methodname`` 는 객체의 형에 의해 정의된 메서드의 이름입니다. 다른 형은 다른 메서드들을 정의합니다. "
 "서로 다른 형들의 메서드는 모호함 없이 같은 이름을 가질 수 있습니다. (*클래스*\\를 사용해서 여러분 자신의 형과 메서드를 "
-"정의하는 것이 가능합니다, :ref:`tut-classes`\\를 보세요) 예에 나오는 메서드 :meth:`!append`\\는 "
-"리스트 객체들에 정의되어 있습니다; 요소를 리스트의 끝에 덧붙입니다. 이 예에서는 ``result = result + [a]`` 와"
-" 동등하지만, 더 효율적입니다."
+"정의하는 것이 가능합니다, :ref:`tut-classes`\\를 보세요) 예에 나오는 메서드 "
+":meth:`~list.append`\\는 리스트 객체들에 정의되어 있습니다; 요소를 리스트의 끝에 덧붙입니다. 이 예에서는 "
+"``result = result + [a]`` 와 동등하지만, 더 효율적입니다."
 
 #: ../../tutorial/controlflow.rst:579
 msgid "More on Defining Functions"
@@ -2012,13 +2057,14 @@ msgstr ""
 "43"
 
 #: ../../tutorial/controlflow.rst:1008
-#, fuzzy
 msgid ""
 "The above example uses a lambda expression to return a function.  Another"
 " use is to pass a small function as an argument.  For instance, "
 ":meth:`list.sort` takes a sorting key function *key* which can be a "
 "lambda function::"
-msgstr "위의 예는 함수를 돌려주기 위해 람다 표현식을 사용합니다. 또 다른 용도는 작은 함수를 인자로 전달하는 것입니다::"
+msgstr ""
+"위의 예는 함수를 돌려주기 위해 람다 표현식을 사용합니다. 또 다른 용도는 작은 함수를 인자로 전달하는 것입니다. 예를 들어, "
+":meth:`list.sort`\\는 정렬 키 함수 *key* 를 받는데, 이것은 람다 함수일 수 있습니다::"
 
 #: ../../tutorial/controlflow.rst:1012
 msgid ""
@@ -2091,7 +2137,6 @@ msgid "Here is an example of a multi-line docstring::"
 msgstr "여기 여러 줄 독스트링의 예가 있습니다::"
 
 #: ../../tutorial/controlflow.rst:1056
-#, fuzzy
 msgid ""
 ">>> def my_function():\n"
 "...     \"\"\"Do nothing, but document it.\n"
@@ -2115,7 +2160,7 @@ msgstr ""
 ">>> print(my_function.__doc__)\n"
 "Do nothing, but document it.\n"
 "\n"
-"    No, really, it doesn't do anything."
+"No, really, it doesn't do anything."
 
 #: ../../tutorial/controlflow.rst:1072
 msgid "Function Annotations"
@@ -2131,7 +2176,6 @@ msgstr ""
 "(자세한 내용은 :pep:`3107` 과 :pep:`484` 를 보세요)."
 
 #: ../../tutorial/controlflow.rst:1084
-#, fuzzy
 msgid ""
 ":term:`Annotations <function annotation>` are stored in the "
 ":attr:`~object.__annotations__` attribute of the function as a dictionary"
@@ -2143,11 +2187,12 @@ msgid ""
 ":keyword:`def` statement.  The following example has a required argument,"
 " an optional argument, and the return value annotated::"
 msgstr ""
-":term:`어노테이션 <function annotation>`\\은 함수의 :attr:`!__annotations__` "
-"어트리뷰트에 딕셔너리로 저장되고 함수의 다른 부분에는 아무런 영향을 미치지 않습니다. 매개변수 어노테이션은 매개변수 이름 뒤에 오는"
-" 콜론으로 정의되는데, 값을 구할 때 어노테이션의 값을 주는 표현식이 뒤따릅니다. 반환 값 어노테이션은 리터럴 ``->`` 와 그 "
-"뒤를 따르는 표현식으로 정의되는데, 매개변수 목록과 :keyword:`def` 문의 끝을 나타내는 콜론 사이에 놓입니다. 다음 "
-"예에서 필수 인자, 선택적 인자, 반환 값이 어노테이트 됩니다::"
+":term:`어노테이션 <function annotation>`\\은 함수의 "
+":attr:`~object.__annotations__` 어트리뷰트에 딕셔너리로 저장되고 함수의 다른 부분에는 아무런 영향을 미치지"
+" 않습니다. 매개변수 어노테이션은 매개변수 이름 뒤에 오는 콜론으로 정의되는데, 값을 구할 때 어노테이션의 값을 주는 표현식이 "
+"뒤따릅니다. 반환 값 어노테이션은 리터럴 ``->`` 와 그 뒤를 따르는 표현식으로 정의되는데, 매개변수 목록과 "
+":keyword:`def` 문의 끝을 나타내는 콜론 사이에 놓입니다. 다음 예에서 필수 인자, 선택적 인자, 반환 값이 어노테이트 "
+"됩니다::"
 
 #: ../../tutorial/controlflow.rst:1093
 #, python-brace-format
@@ -2301,11 +2346,11 @@ msgstr "for"
 
 #: ../../tutorial/controlflow.rst:254
 msgid "..."
-msgstr ""
+msgstr "..."
 
 #: ../../tutorial/controlflow.rst:254
 msgid "ellipsis literal"
-msgstr ""
+msgstr "생략 부호 리터럴"
 
 #: ../../tutorial/controlflow.rst:485 ../../tutorial/controlflow.rst:1023
 msgid "documentation strings"
