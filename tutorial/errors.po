@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2025-10-11 20:40+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Dong-gweon Oh <flowdas@gmail.com>\n"
+"Last-Translator: Kyunghan Bae\n"
 "Language-Team: Korean (https://python.flowdas.com)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
@@ -340,6 +340,10 @@ msgid ""
 "exception types define :meth:`~object.__str__` to print all the arguments"
 " without explicitly accessing ``.args``.  ::"
 msgstr ""
+"*except 절*\\은 예외 이름 뒤에 변수를 지정할 수 있습니다. 이 변수는 예외 인스턴스에 연결되는데, 예외 인스턴스는 보통 "
+"인자를 저장하는 ``args`` 어트리뷰트를 갖습니다. 편의를 위해, 내장 예외 형은 "
+":meth:`~object.__str__`\\을 정의해서 ``.args``\\에 명시적으로 접근하지 않고도 모든 인자를 인쇄합니다."
+" ::"
 
 #: ../../tutorial/errors.rst:166
 msgid ""
@@ -395,6 +399,11 @@ msgid ""
 ":meth:`sys.exit` and :exc:`KeyboardInterrupt` which is raised when a user"
 " wishes to interrupt the program."
 msgstr ""
+":exc:`BaseException`\\은 모든 예외의 공통 베이스 클래스입니다. 그 서브 클래스 중 하나인 "
+":exc:`Exception`\\은 치명적이지 않은 모든 예외의 베이스 클래스입니다. :exc:`Exception`\\의 서브 "
+"클래스가 아닌 예외는 프로그램이 종료되어야 함을 나타내는 데 사용되기 때문에 보통 처리하지 않습니다. 여기에는 "
+":meth:`sys.exit`\\가 일으키는 :exc:`SystemExit`\\와 사용자가 프로그램을 중단하려고 할 때 발생하는 "
+":exc:`KeyboardInterrupt`\\가 포함됩니다."
 
 #: ../../tutorial/errors.rst:194
 msgid ""
@@ -403,6 +412,8 @@ msgid ""
 "with the types of exceptions that we intend to handle, and to allow any "
 "unexpected exceptions to propagate on."
 msgstr ""
+":exc:`Exception`\\은 (거의) 모든 것을 잡는 와일드카드로 사용될 수 있습니다. 하지만 처리하려는 예외의 형을 가능한"
+" 한 구체적으로 지정하고, 예상하지 못한 예외는 계속 전파되도록 두는 것이 좋은 습관입니다."
 
 #: ../../tutorial/errors.rst:199
 msgid ""
@@ -410,6 +421,8 @@ msgid ""
 "the exception and then re-raise it (allowing a caller to handle the "
 "exception as well)::"
 msgstr ""
+":exc:`Exception`\\을 처리하는 가장 흔한 패턴은 예외를 인쇄하거나 로그로 남긴 다음 다시 일으키는 것입니다 (호출자도"
+" 예외를 처리할 수 있도록 합니다)::"
 
 #: ../../tutorial/errors.rst:203
 #, python-brace-format
@@ -601,6 +614,8 @@ msgid ""
 "will have the exception being handled attached to it and included in the "
 "error message::"
 msgstr ""
+":keyword:`except` 섹션 안에서 처리되지 않은 예외가 발생하면, 처리 중이던 예외가 그 예외에 첨부되어 에러 메시지에 "
+"포함됩니다::"
 
 #: ../../tutorial/errors.rst:299
 msgid ""
@@ -648,12 +663,16 @@ msgid ""
 ":keyword:`raise` statement allows an optional :keyword:`from<raise>` "
 "clause::"
 msgstr ""
+"예외가 다른 예외의 직접적인 결과임을 나타내기 위해, :keyword:`raise` 문은 선택적인 "
+":keyword:`from<raise>` 절을 허용합니다::"
 
 #: ../../tutorial/errors.rst:320
 msgid ""
 "# exc must be exception instance or None.\n"
 "raise RuntimeError from exc"
 msgstr ""
+"# exc 는 예외 인스턴스나 None 이어야 합니다.\n"
+"raise RuntimeError from exc"
 
 #: ../../tutorial/errors.rst:323
 msgid "This can be useful when you are transforming exceptions. For example::"
@@ -709,7 +728,7 @@ msgstr ""
 msgid ""
 "It also allows disabling automatic exception chaining using the ``from "
 "None`` idiom::"
-msgstr ""
+msgstr "``from None`` 이디엄을 사용해서 자동 예외 연쇄를 비활성화할 수도 있습니다::"
 
 #: ../../tutorial/errors.rst:350
 msgid ""
@@ -852,6 +871,9 @@ msgid ""
 "version 3.14 the compiler emits a :exc:`SyntaxWarning` for it (see "
 ":pep:`765`)."
 msgstr ""
+":keyword:`!finally` 절이 :keyword:`break`, :keyword:`continue`, "
+":keyword:`return` 문을 실행하면, 예외는 다시 일으켜지지 않습니다. 이는 혼란을 줄 수 있으므로 권장하지 않습니다. "
+"버전 3.14부터 컴파일러는 이 경우 :exc:`SyntaxWarning`\\을 발생시킵니다 (:pep:`765`\\를 보세요)."
 
 #: ../../tutorial/errors.rst:425
 msgid ""
@@ -866,7 +888,6 @@ msgstr ""
 ":keyword:`!continue` 또는 :keyword:`!return` 문 실행 직전에 실행됩니다."
 
 #: ../../tutorial/errors.rst:431
-#, fuzzy
 msgid ""
 "If a :keyword:`!finally` clause includes a :keyword:`!return` statement, "
 "the returned value will be the one from the :keyword:`!finally` clause's "
@@ -877,7 +898,8 @@ msgid ""
 msgstr ""
 ":keyword:`!finally` 절에 :keyword:`!return` 문이 포함되면, 반환 값은 :keyword:`!try` "
 "절의 :keyword:`!return` 문이 주는 값이 아니라, :keyword:`!finally` 절의 "
-":keyword:`!return` 문이 주는 값이 됩니다."
+":keyword:`!return` 문이 주는 값이 됩니다. 이는 혼란을 줄 수 있으므로 권장하지 않습니다. 버전 3.14부터 "
+"컴파일러는 이 경우 :exc:`SyntaxWarning`\\을 발생시킵니다 (:pep:`765`\\를 보세요)."
 
 #: ../../tutorial/errors.rst:439
 msgid "For example::"
@@ -1040,7 +1062,7 @@ msgstr ""
 
 #: ../../tutorial/errors.rst:520
 msgid "Raising and Handling Multiple Unrelated Exceptions"
-msgstr ""
+msgstr "서로 관련 없는 여러 예외를 일으키고 처리하기"
 
 #: ../../tutorial/errors.rst:522
 msgid ""
@@ -1050,6 +1072,8 @@ msgid ""
 "use cases where it is desirable to continue execution and collect "
 "multiple errors rather than raise the first exception."
 msgstr ""
+"발생한 여러 예외를 보고해야 하는 상황이 있습니다. 동시성 프레임워크에서 여러 태스크가 병렬로 실패했을 때가 흔한 경우지만, 첫 "
+"번째 예외를 일으키기보다 실행을 계속하면서 여러 에러를 모으는 것이 바람직한 다른 사용 사례도 있습니다."
 
 #: ../../tutorial/errors.rst:528
 msgid ""
@@ -1057,6 +1081,8 @@ msgid ""
 "that they can be raised together. It is an exception itself, so it can be"
 " caught like any other exception. ::"
 msgstr ""
+"내장 :exc:`ExceptionGroup`\\은 예외 인스턴스의 리스트를 감싸서 함께 일으킬 수 있도록 합니다. 그 자체로 "
+"예외이기 때문에, 다른 예외처럼 잡을 수 있습니다. ::"
 
 #: ../../tutorial/errors.rst:532
 #, python-brace-format
@@ -1120,6 +1146,9 @@ msgid ""
 "letting all other exceptions propagate to other clauses and eventually to"
 " be reraised. ::"
 msgstr ""
+"``except`` 대신 ``except*``\\를 사용하면, 그룹에 있는 예외 중 특정 형과 일치하는 것만 선택적으로 처리할 수 "
+"있습니다. 중첩된 예외 그룹을 보여주는 다음 예에서, 각 ``except*`` 절은 그룹에서 특정 형의 예외를 추출하고, 다른 모든"
+" 예외는 다른 절로 전파되어 결국 다시 일으켜지도록 합니다. ::"
 
 #: ../../tutorial/errors.rst:564
 msgid ""
@@ -1212,6 +1241,8 @@ msgid ""
 "ones that have already been raised and caught by the program, along the "
 "following pattern::"
 msgstr ""
+"예외 그룹에 중첩되는 예외는 형이 아니라 인스턴스여야 한다는 점에 유의하세요. 실제로는 다음과 같은 패턴처럼, 이 예외들이 보통 "
+"프로그램에서 이미 일으켜지고 잡힌 것들이기 때문입니다::"
 
 #: ../../tutorial/errors.rst:610
 msgid ""
@@ -1239,7 +1270,7 @@ msgstr ""
 
 #: ../../tutorial/errors.rst:625
 msgid "Enriching Exceptions with Notes"
-msgstr ""
+msgstr "노트로 예외 보강하기"
 
 #: ../../tutorial/errors.rst:627
 msgid ""
@@ -1251,6 +1282,9 @@ msgid ""
 "notes list. The standard traceback rendering includes all notes, in the "
 "order they were added, after the exception. ::"
 msgstr ""
+"일으키기 위해 예외를 만들 때는, 보통 발생한 에러를 설명하는 정보로 초기화합니다. 예외를 잡은 후에 정보를 추가하는 것이 유용한 "
+"경우가 있습니다. 이를 위해, 예외에는 문자열을 받아 예외의 노트 목록에 추가하는 ``add_note(note)`` 메서드가 "
+"있습니다. 표준 트레이스백 렌더링은 예외 다음에, 추가된 순서대로 모든 노트를 포함합니다. ::"
 
 #: ../../tutorial/errors.rst:634
 msgid ""
@@ -1291,6 +1325,8 @@ msgid ""
 "following each exception in the group has a note indicating when this "
 "error has occurred. ::"
 msgstr ""
+"예를 들어, 예외들을 예외 그룹으로 모을 때, 개별 에러에 문맥 정보를 추가하고 싶을 수 있습니다. 다음 예에서 그룹의 각 예외에는"
+" 이 에러가 언제 발생했는지를 나타내는 노트가 있습니다. ::"
 
 #: ../../tutorial/errors.rst:653
 #, python-brace-format
